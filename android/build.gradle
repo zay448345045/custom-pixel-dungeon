@@ -14,6 +14,7 @@ android {
 
         versionCode appVersionCode
         versionName appVersionName
+        
 
         //noinspection MinSdkTooLow
         minSdkVersion appAndroidMinSDK
@@ -125,3 +126,7 @@ task copyAndroidNatives() {
 //        jvmTarget = "1.8"
 //    }
 //}
+dependencies {
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+}
