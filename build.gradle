@@ -5,6 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
+        
     }
 }
 
@@ -22,6 +23,7 @@ allprojects {
         appAndroidCompileSDK = 33
         appAndroidMinSDK = 19
         appAndroidTargetSDK = 33
+        multiDexEnabled true
 
         gdxVersion = '1.11.0'
         gdxControllersVersion = '2.2.4-SNAPSHOT'
@@ -35,4 +37,7 @@ allprojects {
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     }
 
+}
+dependencies {
+    implementation "androidx.multidex:multidex:2.0.1"
 }
